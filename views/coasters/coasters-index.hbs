@@ -5,7 +5,14 @@
   <h1 style="font-weight: 100">Índice de montañas rusas</h1>
 
   <hr>
+  {{#each coaster}}
   <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
+  <h4>{{name}}</h4>
+  <p>{{description}}</p>
+  <small><strong>Longitud: </strong> {{length}}m | <strong>Inversiones: </strong> {{inversions}}| <strong>Parque: </strong> {{park}}</small>
+  {{/each}}
+  <hr>
+  {{!-- <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
   <h4>Nombre de montaña rusa</h4>
   <p>Descripción de montaña rusa</p>
   <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
@@ -24,13 +31,15 @@
   <h4>Nombre de montaña rusa</h4>
   <p>Descripción de montaña rusa</p>
   <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
-  <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
-  <h4>Nombre de montaña rusa</h4>
-  <p>Descripción de montaña rusa</p>
-  <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
+  <hr> --}}
 
 
 
 </div>
+
+//name: {type: String},
+// description: {type: String},
+// length: {type: Number},
+// inversions: {type: Number},
+// active: {type: Boolean},
+// park: { type: Schema.ObjectId, ref: 'Park' }
